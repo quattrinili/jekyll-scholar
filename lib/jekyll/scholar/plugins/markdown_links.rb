@@ -14,9 +14,9 @@ module Jekyll
       def apply(value)
         value.to_s.gsub(URL_PATTERN) {
           if $1
-            "[#{$2}](#{$1})"
+            "<a href=\"#{$2}\">#{$1}</a>"
           else
-            "[#{$&}](#{$&})"
+            "<a href=\"#{$&}\">#{$&}</a>"
           end
         }
       end

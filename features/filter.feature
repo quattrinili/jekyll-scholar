@@ -197,7 +197,7 @@ Feature: BibTeX
     When I run jekyll
     Then the _site directory should exist
     And the "_site/scholar.html" file should exist
-    And I should see "from \[https://pragprog.com\]\(https://pragprog.com\)" in "_site/scholar.html"
+    And I should see "from <a href=\"https://pragprog.com\">https://pragprog.com</a>" in "_site/scholar.html"
 
   @tags @urls
   Scenario: LaTeX links as Markdown links
@@ -227,7 +227,7 @@ Feature: BibTeX
     When I run jekyll
     Then the _site directory should exist
     And the "_site/scholar.html" file should exist
-    And I should see "\[Pragmatic Bookshelf\]\(https://pragprog.com\)" in "_site/scholar.html"
+    And I should see "<a href=\"Pragmatic Bookshelf\">https://pragprog.com</a>" in "_site/scholar.html"
 
   @tags @superscript
   Scenario: LaTeX Superscript as HTML
